@@ -79,19 +79,21 @@
 
 
 
-<meta name="description" content="Unity3D 简要介绍如果是游戏行业的同学估计就没有不知道 Unity3D的，腾讯的王者荣耀就是基于 Unity3D（简称：U3D）来开发的。如果对 U3D 有兴趣但自己又没有基础的，可以去SiKi学院上找免费的视频来学习，想要看书的话可以去看看《Unity 5.X 从入门到精通》。">
+<meta name="description" content="Unity3D 简要介绍如果是游戏行业的同学估计就没有不知道 Unity3D 的，腾讯的王者荣耀就是基于 Unity3D（简称：U3D）来开发的。在 U3D 中，有三个基本的概念：游戏场景（Scene）、游戏物体（GameObject）和组件（Component）。我们可以借用电影来理解这三个概念，整部电影从开始到结束，由很多场景组成，比如动作电影中的打斗场景在废旧的工厂中进行，废旧的工厂就是游戏">
 <meta name="keywords" content="Unity3D,单元测试,C#,NUnit">
 <meta property="og:type" content="article">
 <meta property="og:title" content="1. Unity3D单元测试框架介绍">
 <meta property="og:url" content="http://yoursite.com/2019/03/04/1. Unity3D单元测试框架介绍/index.html">
 <meta property="og:site_name" content="3F">
-<meta property="og:description" content="Unity3D 简要介绍如果是游戏行业的同学估计就没有不知道 Unity3D的，腾讯的王者荣耀就是基于 Unity3D（简称：U3D）来开发的。如果对 U3D 有兴趣但自己又没有基础的，可以去SiKi学院上找免费的视频来学习，想要看书的话可以去看看《Unity 5.X 从入门到精通》。">
+<meta property="og:description" content="Unity3D 简要介绍如果是游戏行业的同学估计就没有不知道 Unity3D 的，腾讯的王者荣耀就是基于 Unity3D（简称：U3D）来开发的。在 U3D 中，有三个基本的概念：游戏场景（Scene）、游戏物体（GameObject）和组件（Component）。我们可以借用电影来理解这三个概念，整部电影从开始到结束，由很多场景组成，比如动作电影中的打斗场景在废旧的工厂中进行，废旧的工厂就是游戏">
 <meta property="og:locale" content="简体中文">
 <meta property="og:image" content="http://yoursite.com/images/U3DIntro.jpg">
-<meta property="og:updated_time" content="2019-03-04T07:46:14.257Z">
+<meta property="og:image" content="http://yoursite.com/images/UnityEditor.jpg">
+<meta property="og:image" content="http://yoursite.com/images/UnityPreferences.jpg">
+<meta property="og:updated_time" content="2019-03-04T08:54:18.873Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1. Unity3D单元测试框架介绍">
-<meta name="twitter:description" content="Unity3D 简要介绍如果是游戏行业的同学估计就没有不知道 Unity3D的，腾讯的王者荣耀就是基于 Unity3D（简称：U3D）来开发的。如果对 U3D 有兴趣但自己又没有基础的，可以去SiKi学院上找免费的视频来学习，想要看书的话可以去看看《Unity 5.X 从入门到精通》。">
+<meta name="twitter:description" content="Unity3D 简要介绍如果是游戏行业的同学估计就没有不知道 Unity3D 的，腾讯的王者荣耀就是基于 Unity3D（简称：U3D）来开发的。在 U3D 中，有三个基本的概念：游戏场景（Scene）、游戏物体（GameObject）和组件（Component）。我们可以借用电影来理解这三个概念，整部电影从开始到结束，由很多场景组成，比如动作电影中的打斗场景在废旧的工厂中进行，废旧的工厂就是游戏">
 <meta name="twitter:image" content="http://yoursite.com/images/U3DIntro.jpg">
 
 
@@ -364,8 +366,16 @@
       
 
       
-        <h2 id="Unity3D-简要介绍"><a href="#Unity3D-简要介绍" class="headerlink" title="Unity3D 简要介绍"></a>Unity3D 简要介绍</h2><p>如果是游戏行业的同学估计就没有不知道 Unity3D的，腾讯的王者荣耀就是基于 Unity3D（简称：U3D）来开发的。如果对 U3D 有兴趣但自己又没有基础的，可以去<a href="http://www.sikiedu.com/" target="_blank" rel="noopener">SiKi学院</a>上找免费的视频来学习，想要看书的话可以去看看《Unity 5.X 从入门到精通》。</p>
-<p><img src="/images/U3DIntro.jpg" alt="ddd"></p>
+        <h3 id="Unity3D-简要介绍"><a href="#Unity3D-简要介绍" class="headerlink" title="Unity3D 简要介绍"></a>Unity3D 简要介绍</h3><p>如果是游戏行业的同学估计就没有不知道 Unity3D 的，腾讯的王者荣耀就是基于 Unity3D（简称：U3D）来开发的。在 U3D 中，有三个基本的概念：游戏场景（Scene）、游戏物体（GameObject）和组件（Component）。我们可以借用电影来理解这三个概念，整部电影从开始到结束，由很多场景组成，比如动作电影中的打斗场景在废旧的工厂中进行，废旧的工厂就是游戏场景；废旧工厂中的打斗场景中又由很多的物体组成，比如人、荒废的车床、被吓飞的白鸽等，这些就是游戏物体；废弃的车床又由轮子、各个钢铁部件组成，这里的轮子和部件就是游戏物体的组件。换成 U3D 中的术语就如下图所示:</p>
+<p><img src="/images/U3DIntro.jpg" alt></p>
+<p>以上就是 U3D 的简要介绍，如果对 U3D 有兴趣但自己又没有基础的，可以去 <a href="http://www.sikiedu.com/" target="_blank" rel="noopener">SiKi学院</a> 上找免费的入门视频来学习，想要看书的话可以去看看《Unity 5.X 从入门到精通》。</p>
+<h3 id="Unity3D-开发环境简要说明"><a href="#Unity3D-开发环境简要说明" class="headerlink" title="Unity3D 开发环境简要说明"></a>Unity3D 开发环境简要说明</h3><p>U3D 的开发工具叫 Unity 编辑器，在 <a href="https://unity3d.com/cn/get-unity/download/archive" target="_blank" rel="noopener">下载地址</a> 里选择对应的版本和平台下的 Unity 编辑器即可，比如我这里选择 Windows 平台的最新版本，如截图所示：</p>
+<p><img src="/images/UnityEditor.jpg" alt></p>
+<p>U3D 目前只推荐使用 C# 作为脚本开发语言，为了方便编写和调试代码通常不直接使用 Unity 编辑器作为 IDE，我们使用 Microsoft Visual Studio（简称：VS）作为 C# 脚本的开发工具，可以点击 <a href="https://visualstudio.microsoft.com/zh-hans/" target="_blank" rel="noopener">下载链接</a> 下载 VS，具体的安装不再详述。</p>
+<p>安装完成 VS 后，打开 Unity 编辑器，在菜单栏上选择 Edit &gt; Preferences…，在弹出的 Unity Preferences 对话框中选择 External Tools &gt; External Script Editor，最后选择 VS 即可，如下图所示：</p>
+<p><img src="/images/UnityPreferences.jpg" alt></p>
+<p>到此为止开发环境配置完成。</p>
+<p>### </p>
 
       
     </div>
@@ -548,7 +558,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Unity3D-简要介绍"><span class="nav-number">1.</span> <span class="nav-text">Unity3D 简要介绍</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Unity3D-简要介绍"><span class="nav-number">1.</span> <span class="nav-text">Unity3D 简要介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unity3D-开发环境简要说明"><span class="nav-number">2.</span> <span class="nav-text">Unity3D 开发环境简要说明</span></a></li></ol></div>
             
 
           </div>
