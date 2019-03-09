@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Unity3D,单元测试,NUnit,状态机,C#,">
+  <meta name="keywords" content="Unity3D,单元测试,C#,NUnit,状态机,">
 
 
 
@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="被测项目背景介绍这里只介绍项目中的一个 UI 模块。如下图所示，在整个 UI 模块中有很多子模块，在业务上各个子UI模块之间会经常需要来回切换。那么如何去实现该功能呢？在频繁的 UI 状态切换中又如何保证其正确性呢？  状态机的概念答案就是：状态机。举个例子来帮助大家了解状态机的含义。每个上班族大概每天要干的事就是：早上起来去上班、到下班时间下班回家、困了累了上床睡觉。那么上班族一天的状态就有：上">
-<meta name="keywords" content="Unity3D,单元测试,NUnit,状态机,C#">
+<meta name="description" content="被测项目背景介绍这里只介绍项目中的一个 UI 模块。如下图所示，在整个 UI 模块中有很多子模块，在业务上各个子 UI 模块之间会经常需要来回切换。那么如何去实现该功能呢？在频繁的 UI 状态切换中又如何保证其正确性呢？  状态机的概念答案就是：状态机。举个例子来帮助大家了解状态机的含义。每个上班族大概每天要干的事就是：早上起来去上班、到下班时间下班回家、困了累了上床睡觉。那么上班族一天的状态就有">
+<meta name="keywords" content="Unity3D,单元测试,C#,NUnit,状态机">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2. Unity3D 结合实际项目实现单元测试">
 <meta property="og:url" content="http://yoursite.com/2019/03/04/2. Unity3D结合实际项目实现单元测试/index.html">
 <meta property="og:site_name" content="3F">
-<meta property="og:description" content="被测项目背景介绍这里只介绍项目中的一个 UI 模块。如下图所示，在整个 UI 模块中有很多子模块，在业务上各个子UI模块之间会经常需要来回切换。那么如何去实现该功能呢？在频繁的 UI 状态切换中又如何保证其正确性呢？  状态机的概念答案就是：状态机。举个例子来帮助大家了解状态机的含义。每个上班族大概每天要干的事就是：早上起来去上班、到下班时间下班回家、困了累了上床睡觉。那么上班族一天的状态就有：上">
+<meta property="og:description" content="被测项目背景介绍这里只介绍项目中的一个 UI 模块。如下图所示，在整个 UI 模块中有很多子模块，在业务上各个子 UI 模块之间会经常需要来回切换。那么如何去实现该功能呢？在频繁的 UI 状态切换中又如何保证其正确性呢？  状态机的概念答案就是：状态机。举个例子来帮助大家了解状态机的含义。每个上班族大概每天要干的事就是：早上起来去上班、到下班时间下班回家、困了累了上床睡觉。那么上班族一天的状态就有">
 <meta property="og:locale" content="简体中文">
 <meta property="og:image" content="http://yoursite.com/images/Unity3D/CoreUI.jpg">
 <meta property="og:image" content="http://yoursite.com/images/Unity3D/StateChartDemo.jpg">
@@ -93,10 +93,10 @@
 <meta property="og:image" content="http://yoursite.com/images/Unity3D/ChangeToFunc.jpg">
 <meta property="og:image" content="http://yoursite.com/images/Unity3D/EditModeTestResult.jpg">
 <meta property="og:image" content="http://yoursite.com/images/Unity3D/PlayModeTestResult.jpg">
-<meta property="og:updated_time" content="2019-03-09T06:07:40.221Z">
+<meta property="og:updated_time" content="2019-03-09T06:10:13.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2. Unity3D 结合实际项目实现单元测试">
-<meta name="twitter:description" content="被测项目背景介绍这里只介绍项目中的一个 UI 模块。如下图所示，在整个 UI 模块中有很多子模块，在业务上各个子UI模块之间会经常需要来回切换。那么如何去实现该功能呢？在频繁的 UI 状态切换中又如何保证其正确性呢？  状态机的概念答案就是：状态机。举个例子来帮助大家了解状态机的含义。每个上班族大概每天要干的事就是：早上起来去上班、到下班时间下班回家、困了累了上床睡觉。那么上班族一天的状态就有：上">
+<meta name="twitter:description" content="被测项目背景介绍这里只介绍项目中的一个 UI 模块。如下图所示，在整个 UI 模块中有很多子模块，在业务上各个子 UI 模块之间会经常需要来回切换。那么如何去实现该功能呢？在频繁的 UI 状态切换中又如何保证其正确性呢？  状态机的概念答案就是：状态机。举个例子来帮助大家了解状态机的含义。每个上班族大概每天要干的事就是：早上起来去上班、到下班时间下班回家、困了累了上床睡觉。那么上班族一天的状态就有">
 <meta name="twitter:image" content="http://yoursite.com/images/Unity3D/CoreUI.jpg">
 
 
@@ -369,7 +369,7 @@
       
 
       
-        <h3 id="被测项目背景介绍"><a href="#被测项目背景介绍" class="headerlink" title="被测项目背景介绍"></a>被测项目背景介绍</h3><p>这里只介绍项目中的一个 UI 模块。如下图所示，在整个 UI 模块中有很多子模块，在业务上各个子UI模块之间会经常需要来回切换。那么如何去实现该功能呢？在频繁的 UI 状态切换中又如何保证其正确性呢？</p>
+        <h3 id="被测项目背景介绍"><a href="#被测项目背景介绍" class="headerlink" title="被测项目背景介绍"></a>被测项目背景介绍</h3><p>这里只介绍项目中的一个 UI 模块。如下图所示，在整个 UI 模块中有很多子模块，在业务上各个子 UI 模块之间会经常需要来回切换。那么如何去实现该功能呢？在频繁的 UI 状态切换中又如何保证其正确性呢？</p>
 <p><img src="/images/Unity3D/CoreUI.jpg" alt></p>
 <h4 id="状态机的概念"><a href="#状态机的概念" class="headerlink" title="状态机的概念"></a>状态机的概念</h4><p>答案就是：状态机。举个例子来帮助大家了解状态机的含义。每个上班族大概每天要干的事就是：早上起来去上班、到下班时间下班回家、困了累了上床睡觉。那么上班族一天的状态就有：上班、下班、睡觉；状态的转换条件有：早上会去上班、晚上下班、12点后睡觉；触发状态的转换条件有：到早上了就起床去上班、到晚上了就下班、12点了就睡觉。</p>
 <p><img src="/images/Unity3D/StateChartDemo.jpg" alt></p>
@@ -432,11 +432,11 @@
           
             <a href="/tags/单元测试/" rel="tag"># 单元测试</a>
           
+            <a href="/tags/C/" rel="tag"># C#</a>
+          
             <a href="/tags/NUnit/" rel="tag"># NUnit</a>
           
             <a href="/tags/状态机/" rel="tag"># 状态机</a>
-          
-            <a href="/tags/C/" rel="tag"># C#</a>
           
         </div>
       
