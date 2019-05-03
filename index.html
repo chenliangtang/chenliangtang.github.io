@@ -310,7 +310,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-05-03T17:43:20+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-05-03T21:56:45+08:00">
                 2019-05-03
               </time>
             
@@ -319,7 +319,7 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; post.updated
-              <time itemprop="dateUpdated" datetime="2019-05-03T17:43:20+08:00" content="2019-05-03">
+              <time itemprop="dateUpdated" datetime="2019-05-03T21:56:45+08:00" content="2019-05-03">
               2019-05-03
               </time>
             </span>
@@ -416,7 +416,7 @@
 <p>其中， docker-entrypoint.sh shell 脚本内容如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">jarFile=$(ls . | grep jar) </span><br><span class="line"></span><br><span class="line">java -jar $jarFile</span><br></pre></td></tr></table></figure></p>
 <p>对 Dockerfile 内容的解释：其中 Dockerfile 这个名称不能变，就如 Makefile 文件是 make 编译的文件说明一样，这是规范；FROM 这行表示我构建的镜像基础是 jdk8，因为 hellospringboot 应用依赖于 jdk8；MAINTAINER 写上作者；COPY 行是把需要生成镜像的 jar 包和 shell 脚本拷贝进镜像中；RUN 行把 shell 脚本改成可执行文件，同时将脚本链接到环境变量中，以方便后面的 CMD 执行；WORKDIR 指明镜像的工作目录；EXPOSE 指明镜像的开放端口，因为 hellospringboot 端口为 8080 所以这里也设置为 8080；最后一行的 CMD 是指在启动容器时会执行的命令，这里就是通过执行 java -jar 命令将服务启动起来。</p>
 <p>docker-entrypoint.sh 脚本就很简单了，就是获取到 jar 包，然后通过 java -jar 命令把应用启动起来。</p>
-<h3 id="构建镜像、容器化启动应用"><a href="#构建镜像、容器化启动应用" class="headerlink" title="构建镜像、容器化启动应用"></a>构建镜像、容器化启动应用</h3><p>上面我们已经完成 Dockerfile 文件的编写，接下来就简单了，在 Dockerfile 文件的当前目录下执行命令 docker build 即可构建镜像（-t 参数是给镜像起个名字并以 v1 作为 tag 表示）：</p>
+<h3 id="构建镜像、容器化启动应用"><a href="#构建镜像、容器化启动应用" class="headerlink" title="构建镜像、容器化启动应用"></a>构建镜像、容器化启动应用</h3><p>上面我们已经完成 Dockerfile 文件的编写，接下来就简单了，在 Dockerfile 文件的当前目录下执行命令 docker build 即可构建镜像（-t 参数是给镜像起个名字并以 v1 作为 tag 标识）：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># docker build -t hellospringboot:v1 .</span><br><span class="line">......</span><br><span class="line">Successfully built dfbdde43b0aa</span><br><span class="line">Successfully tagged hellospringboot:v1</span><br></pre></td></tr></table></figure>
 <p>提示成功了，执行 docker images 命令查看构建成功的镜像：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># docker images</span><br><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">hellospringboot     v1                  dfbdde43b0aa        38 minutes ago      328MB</span><br></pre></td></tr></table></figure>
