@@ -263,6 +263,224 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/03/7. HTML 知识总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ChenLiangtang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="3F">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/03/7. HTML 知识总结/" itemprop="url">HTML 知识总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-03T22:09:00+08:00">
+                2019-05-03
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2019-05-07T23:26:42+08:00">
+                2019-05-07
+              </time>
+            
+          </span>
+
+          
+            <span class="post-updated">
+              &nbsp; | &nbsp; post.updated
+              <time itemprop="dateUpdated" datetime="2019-05-07T23:26:42+08:00" content="2019-05-07">
+              2019-05-07
+              </time>
+            </span>
+          
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web-前端/" itemprop="url" rel="index">
+                    <span itemprop="name">Web 前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/05/03/7. HTML 知识总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2019/05/03/7. HTML 知识总结/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="HTML-简介"><a href="#HTML-简介" class="headerlink" title="HTML 简介"></a>HTML 简介</h3><p>HTML 的全称是超文本标记语言(HyperText Markup Language)，它不是编程语言，而是标记语言。Web 前端的核心知识包括 HTML、CSS 和 JavaScript，HTML 是前端的骨架，它定义了网页内容的含义和结构，如果类比一座房子，HTML 就是砖瓦、钢筋混泥土；CSS 的全称叫层叠样式表(cascading style sheet)，通常用来描述一个网页的表现与展示效果，好比一座房子的外观样式；JavaScript 主要用来实现网页的功能与行为。这些内容我都会在后面逐一介绍。</p>
+<p>光说不干都是扯淡，我们来看下面的结合了 HTML + CSS + JavaScript 的小栗子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>demo<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">	  p &#123;</span></span><br><span class="line"><span class="undefined">	    color: blue;</span></span><br><span class="line"><span class="undefined">	  &#125;</span></span><br><span class="line"><span class="undefined">	  </span></span><br><span class="line"><span class="undefined">	</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">	  function myFunction()</span></span><br><span class="line"><span class="undefined">	  &#123;</span></span><br><span class="line"><span class="undefined">		document.write("Hello World.");</span></span><br><span class="line"><span class="undefined">	  &#125;</span></span><br><span class="line"><span class="undefined">	</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span> <span class="attr">align</span>=<span class="string">"center"</span>&gt;</span>This is a heading 1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>This is a paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">"myFunction()"</span>&gt;</span>click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>将以上代码使用 txt 等编辑器保存为 html 文件格式的文件，然后用浏览器打来即可看到效果。对以上代码的简要解释：!DOCTYPE html 是 HTML5 的声明，它已经是新一代标准；&lt;html>…&lt;/html>、&lt;head>…&lt;/head>、&lt;body>…&lt;/body>、&lt;titile>…&lt;/title>、&lt;h1>…&lt;/h1>、&lt;p>…&lt;/p>、&lt;button>&lt;/button>等是 html 标签，一般都是成对出现，一个是开始标签，一个是结束标签，如果你将这些标签的含义套用到写文章上就比较好理解了；&lt;stype>…&lt;/stype> 标签下定义了一个 p 标签的元素选择器，用来修饰段落的，让段落的颜色显示蓝色；&lt;script>…&lt;/script> 标签嵌入了一段 JavaScript 代码，逻辑就是向网页输出 Hello World；再看看 &lt;button>…&lt;/button> 标签，基本逻辑就是点击了 click me 按钮就会触发 JavaScript 代码，输出 Hello World。</p>
+<h3 id="HTML-常用元素总结"><a href="#HTML-常用元素总结" class="headerlink" title="HTML 常用元素总结"></a>HTML 常用元素总结</h3><p>上一节已经对 HTML 作了简要介绍，这一节再对 HTML 进行更详细的解释。“HTML 不是编程语言而是标记语言”，相信通过上面的例子对这句话理解更深刻了。以下对 HTML 常用的元素及属性进行总结。</p>
+<h4 id="lt-html-元素"><a href="#lt-html-元素" class="headerlink" title="&lt;html> 元素"></a>&lt;html> 元素</h4><p>&lt;html> 元素定义了整个 HTML 文档，每个 HTML 文档都应该包含该元素。 </p>
+<h4 id="lt-head-元素"><a href="#lt-head-元素" class="headerlink" title="&lt;head> 元素"></a>&lt;head> 元素</h4><p>&lt;head> 元素是所有头部元素的容器。&lt;head> 内的元素可包含脚本，指示浏览器在何处可以找到样式表，提供元信息，等等。head 标签下通常会有 meta 标签、title 标签、link/style 标签和 script 标签，在编写 HTML 的 head 部分时建议也是按照这个顺序来编写。因为，meta 最好写在第一个，特别是 meta chaset 设定必须写第一个，它们是元数据，能让数据获取方得知此页面的元数据；title 紧随 meta 之后是因为可能获取方需要知道页面标题信息，并且在最先获取 chaset 信息后知道此标题的编码方式；link、style 紧随 meta，其实还是主要为 link 大部分都是 CSS 样式文件考虑；script 放在最后，是基于script 不光是下载还是执行都会阻塞页面考虑，让它尽量偏后。</p>
+<h5 id="lt-meta-标签"><a href="#lt-meta-标签" class="headerlink" title="&lt;meta> 标签"></a>&lt;meta> 标签</h5><p>meta 标签是 HTML 中 head 头部的一个辅助性标签，它位于 HTML 文档头部的 head 和 title 标记之间，它提供用户不可见的信息。虽然这部分信息用户不可见，但是其作用非常强大，特别是当今的前端开发工作中，设置合适的 meta 标签可以大大提升网站页面的可用性。比如在桌面端开发中，meta 标签通常用来为搜索引擎优化（SEO）及  robots 定义页面主题，或者是定义用户浏览器上的 cookie；它可以用于鉴别作者，设定页面格式，标注内容提要和关键字；还可以设置页面使其可以根据你定义的时间间隔刷新自己，以及设置 RASC 内容等级，等等。以下是它的简单示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--声明文档使用的字符编码--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--简体中文生声明--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-cmn-Hans"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- Web 应用的名称（仅当网站被用作为一个应用时才使用）--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"application-name"</span> <span class="attr">content</span>=<span class="string">"应用名称"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 在客户端存储 cookie，web 浏览器的客户端识别 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>页面标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span>&gt;</span><br><span class="line">    ...</span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>meta 标签根据属性的不同，可分为两大部分：http-equiv 和 name 属性。http-equiv：相当于 http 的文件头作用，它可以向浏览器传回一些有用的信息，以帮助浏览器正确地显示网页内容；name 属性：主要用于描述网页，与之对应的属性值为 content，content 中的内容主要是便于浏览器，搜索引擎等机器人识别，等等。</p>
+<h5 id="lt-title-元素"><a href="#lt-title-元素" class="headerlink" title="&lt;title> 元素"></a>&lt;title> 元素</h5><p>title 标签定义文档的标题。其实该字段还会对 SEO 有帮助，建议不要缺省。</p>
+<h5 id="样式表"><a href="#样式表" class="headerlink" title="样式表"></a>样式表</h5><p>样式表有三种，分别为：外部样式表、内部样式表和内联样式表。当 HTML 代码中如果涉及三种不同的样式表时，它们的优先级是这样的：外部样式表 &lt; 内部样式表 &lt; 内联样式表。</p>
+<h6 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h6><p>外部样式表如下所示，使用 link 标签链接外部 css 资源。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"mystyle.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h6 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h6><p>内部样式表如下所示，在 head 标签内部声明并定义 css 样式。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">body &#123;background-color: red&#125;</span></span><br><span class="line"><span class="undefined">p &#123;margin-left: 20px&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h6 id="内联样式"><a href="#内联样式" class="headerlink" title="内联样式"></a>内联样式</h6><p>内联样式表如下所示，在用到某个元素标签时以元素的属性的形式定义显示样式。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"color: red; margin-left: 20px"</span>&gt;</span></span><br><span class="line">This is a paragraph</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="lt-script-元素"><a href="#lt-script-元素" class="headerlink" title="&lt;script> 元素"></a>&lt;script> 元素</h5><p>script 标签用于定义客户端脚本，比如 JavaScript。script 元素既可包含脚本语句，也可通过 src 属性指向外部脚本文件。必需的 type 属性规定脚本的 MIME 类型 JavaScript 最常用于图片操作、表单验证以及内容动态更新。</p>
+<p>通过 src 属性指向外部脚本文件的例子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./static/demo.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>script 标签包含脚本语句的例子（在 HTML5 中 type 属性可缺省）：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">document.write("Hello World!")</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="lt-body-元素"><a href="#lt-body-元素" class="headerlink" title="&lt;body> 元素"></a>&lt;body> 元素</h4><p>body 元素定义了 HTML 文档的主体。在 body 元素下面的元素及属性等就很多了，这里只介绍常用的。</p>
+<h5 id="lt-h1-lt-h6-元素"><a href="#lt-h1-lt-h6-元素" class="headerlink" title="&lt;h1> - &lt;h6> 元素"></a>&lt;h1> - &lt;h6> 元素</h5><p>代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is a heading 1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>This is a heading 2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>This is a heading 3<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>效果如下所示：</p>
+<p></p><h1>This is a heading 1</h1><p></p>
+<p></p><h2>This is a heading 2</h2><p></p>
+<h3>This is a heading 3</h3>
+
+
+<h5 id="lt-p-元素"><a href="#lt-p-元素" class="headerlink" title="&lt;p> 元素"></a>&lt;p> 元素</h5><p>This is a paragraph.</p><br><p>This is another paragraph.</p>
+
+<h4 id="lt-a-元素"><a href="#lt-a-元素" class="headerlink" title="&lt;a> 元素"></a>&lt;a> 元素</h4><p><a href="http://www.w3school.com.cn" target="_blank" rel="noopener">This is a link</a></p>
+<h4 id="lt-img-元素"><a href="#lt-img-元素" class="headerlink" title="&lt;img> 元素"></a>&lt;img> 元素</h4><p><img src="w3school.jpg" width="104" height="142"></p>
+<h4 id="lt-br-元素"><a href="#lt-br-元素" class="headerlink" title="&lt;br /> 元素"></a>&lt;br /> 元素</h4><h4 id="style-属性"><a href="#style-属性" class="headerlink" title="style 属性"></a>style 属性</h4><p>style 属性用于改变 HTML 元素的样式。</p>
+<p><body style="background-color:yellow"></body></p>
+<p></p><h2 style="background-color:red">This is a heading</h2><p></p>
+<p style="background-color:green">This is a paragraph.</p><br><h1 style="font-family:verdana">A heading</h1><br><p style="font-family:arial;color:red;font-size:20px;">A paragraph.</p><br><h1 style="text-align:center">This is a heading</h1><br><p>The heading above is aligned to the center of this page.</p> 
+
+<h4 id="html-文本格式化"><a href="#html-文本格式化" class="headerlink" title="html 文本格式化"></a>html 文本格式化</h4><p>标签    描述<br><b>    定义粗体文本。</b></p>
+<p><big>    定义大号字。<br><em>    定义着重文字。<br><i>    定义斜体字。<br><small>    定义小号字。<br><strong>    定义加重语气。<br><sub>    定义下标字。<br><sup>    定义上标字。<br><ins>    定义插入字。<br><del>    定义删除字。 </del></ins></sup></sub></strong></small></i></em></big></p>
+<h4 id="Bgcolor-属性"><a href="#Bgcolor-属性" class="headerlink" title="Bgcolor 属性"></a>Bgcolor 属性</h4><p>背景颜色（Bgcolor）<br>背景颜色属性将背景设置为某种颜色。属性值可以是十六进制数、RGB 值或颜色名。</p>
+<p><body bgcolor="#000000"></body></p>
+<p><body bgcolor="rgb(0,0,0)"></body></p>
+<body bgcolor="black">
+
+<h4 id="Backgrounds-属性"><a href="#Backgrounds-属性" class="headerlink" title="Backgrounds 属性"></a>Backgrounds 属性</h4><p>背景（Background）<br>背景属性将背景设置为图像。属性值为图像的URL。如果图像尺寸小于浏览器窗口，那么图像将在整个浏览器窗口进行复制。</p>
+<p><body background="clouds.gif"></body></p>
+<p><body background="http://www.w3school.com.cn/clouds.gif"><br>URL可以是相对地址，如第一行代码。也可以使绝对地址，如第二行代码。</body></p>
+<h4 id="HTML-表格"><a href="#HTML-表格" class="headerlink" title="HTML 表格"></a>HTML 表格</h4><h4 id="HTML-列表"><a href="#HTML-列表" class="headerlink" title="HTML 列表"></a>HTML 列表</h4><h4 id="HTML-块"><a href="#HTML-块" class="headerlink" title="HTML 块"></a>HTML 块</h4><p>HTML <div> 和 <span></span></div></p>
+<h4 id="HTML-布局"><a href="#HTML-布局" class="headerlink" title="HTML 布局"></a>HTML 布局</h4><h4 id="HTML-表单"><a href="#HTML-表单" class="headerlink" title="HTML 表单"></a>HTML 表单</h4><h4 id="HTML5-语义化"><a href="#HTML5-语义化" class="headerlink" title="HTML5 语义化"></a>HTML5 语义化</h4><h4 id="HTML（5）-代码规范"><a href="#HTML（5）-代码规范" class="headerlink" title="HTML（5） 代码规范"></a>HTML（5） 代码规范</h4><h4 id="HTML-响应式-Web-设计"><a href="#HTML-响应式-Web-设计" class="headerlink" title="HTML 响应式 Web 设计"></a>HTML 响应式 Web 设计</h4><h3 id="综合栗子"><a href="#综合栗子" class="headerlink" title="综合栗子"></a>综合栗子</h3><p>收尾</p>
+</body>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/02/6. 容器化部署 Springboot 应用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -310,7 +528,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-05-03T21:56:45+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-05-03T22:51:55+08:00">
                 2019-05-03
               </time>
             
@@ -319,7 +537,7 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; post.updated
-              <time itemprop="dateUpdated" datetime="2019-05-03T21:56:45+08:00" content="2019-05-03">
+              <time itemprop="dateUpdated" datetime="2019-05-03T22:51:55+08:00" content="2019-05-03">
               2019-05-03
               </time>
             </span>
@@ -412,7 +630,7 @@
 <h3 id="编写-Dockerfile"><a href="#编写-Dockerfile" class="headerlink" title="编写 Dockerfile"></a>编写 Dockerfile</h3><p>接着上篇 <a href="http://localhost:4000/2019/05/02/5.%20%E4%BD%BF%E7%94%A8%20Springboot%20%E7%BC%96%E5%86%99%20Helloworld%20%E5%BA%94%E7%94%A8/" target="_blank" rel="noopener"> 使用 Springboot 编写 Helloworld 应用</a> 我们完成了使用 Springboot 编写 Helloworld 应用的过程，接下来我们要基于这个简单的应用制作 Dockerfile 文件，以构建 Helloworld 应用的镜像，实现容器化部署。</p>
 <p>先将 hellospringboot 工程拷贝到 CentOS7 机器上来，然后用 gradlew 打包应用:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># chmod + gradlew</span><br><span class="line"></span><br><span class="line"># ./gradlew build</span><br></pre></td></tr></table></figure></p>
 <p>这时，在 ./build/libs/ 目录下就可以看到打包好了的 jar 包了，这时候运行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># java -jar ./build/libs/hellospringboot-0.0.1-SNAPSHOT.jar</span><br></pre></td></tr></table></figure></p>
-<p>应用就可以跑起来了，访问 ip:8080 就可以看到有 Helloworld 返回了。但是这还不是我们想要的，我们要实现容器化部署。于是我编写了 Dockerfile：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">FROM java:8-jre</span><br><span class="line"></span><br><span class="line">MAINTAINER &lt;chenliangtang&gt;</span><br><span class="line"></span><br><span class="line">COPY ./build/libs/* docker-entrypoint.sh /</span><br><span class="line"></span><br><span class="line">RUN chmod +x docker-entrypoint.sh &amp;&amp; ln -s /docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh</span><br><span class="line"></span><br><span class="line">WORKDIR /</span><br><span class="line"></span><br><span class="line">EXPOSE 8080</span><br><span class="line"></span><br><span class="line">CMD [&quot;docker-entrypoint.sh&quot;]</span><br></pre></td></tr></table></figure></p>
+<p>应用就可以跑起来了，访问 ip:8080 就可以看到有 Helloworld 返回了。但是这还不是我们想要的，我们要实现容器化部署。于是我编写了 Dockerfile：<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> java:<span class="number">8</span>-jre</span><br><span class="line"></span><br><span class="line"><span class="keyword">MAINTAINER</span> &lt;chenliangtang&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">COPY</span> ./build/libs/* docker-entrypoint.sh /</span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span> chmod +x docker-entrypoint.sh &amp;&amp; ln -s /docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh</span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span> /</span><br><span class="line"></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">8080</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span> ["docker-entrypoint.sh"]</span><br></pre></td></tr></table></figure></p>
 <p>其中， docker-entrypoint.sh shell 脚本内容如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">jarFile=$(ls . | grep jar) </span><br><span class="line"></span><br><span class="line">java -jar $jarFile</span><br></pre></td></tr></table></figure></p>
 <p>对 Dockerfile 内容的解释：其中 Dockerfile 这个名称不能变，就如 Makefile 文件是 make 编译的文件说明一样，这是规范；FROM 这行表示我构建的镜像基础是 jdk8，因为 hellospringboot 应用依赖于 jdk8；MAINTAINER 写上作者；COPY 行是把需要生成镜像的 jar 包和 shell 脚本拷贝进镜像中；RUN 行把 shell 脚本改成可执行文件，同时将脚本链接到环境变量中，以方便后面的 CMD 执行；WORKDIR 指明镜像的工作目录；EXPOSE 指明镜像的开放端口，因为 hellospringboot 端口为 8080 所以这里也设置为 8080；最后一行的 CMD 是指在启动容器时会执行的命令，这里就是通过执行 java -jar 命令将服务启动起来。</p>
 <p>docker-entrypoint.sh 脚本就很简单了，就是获取到 jar 包，然后通过 java -jar 命令把应用启动起来。</p>
@@ -1737,7 +1955,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1748,7 +1966,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1759,7 +1977,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

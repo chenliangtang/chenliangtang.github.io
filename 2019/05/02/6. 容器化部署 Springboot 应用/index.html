@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="3F">
 <meta property="og:description" content="CentOS7 上安装 JDK8这些年来 Docker 是越来越流行了，企业的环境部署也普遍都容器化了，虽说 Docker 当前也支持在 Windows 上安装，但真正的线上环境估计没有人选用 Windows 作为容器化平台，所以我们还是选择在 Linux 上容器化部署应用。既然 Springboot 应用基于 Java 来开发，那就先在 Linux 上安装 JDK 吧。这里有个小问题值得注意下，">
 <meta property="og:locale" content="简体中文">
-<meta property="og:updated_time" content="2019-05-03T13:56:45.238Z">
+<meta property="og:updated_time" content="2019-05-03T14:51:55.678Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="容器化部署 Springboot 应用">
 <meta name="twitter:description" content="CentOS7 上安装 JDK8这些年来 Docker 是越来越流行了，企业的环境部署也普遍都容器化了，虽说 Docker 当前也支持在 Windows 上安装，但真正的线上环境估计没有人选用 Windows 作为容器化平台，所以我们还是选择在 Linux 上容器化部署应用。既然 Springboot 应用基于 Java 来开发，那就先在 Linux 上安装 JDK 吧。这里有个小问题值得注意下，">
@@ -308,7 +308,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-05-03T21:56:45+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-05-03T22:51:55+08:00">
                 2019-05-03
               </time>
             
@@ -317,7 +317,7 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; post.updated
-              <time itemprop="dateUpdated" datetime="2019-05-03T21:56:45+08:00" content="2019-05-03">
+              <time itemprop="dateUpdated" datetime="2019-05-03T22:51:55+08:00" content="2019-05-03">
               2019-05-03
               </time>
             </span>
@@ -408,7 +408,7 @@
 <h3 id="编写-Dockerfile"><a href="#编写-Dockerfile" class="headerlink" title="编写 Dockerfile"></a>编写 Dockerfile</h3><p>接着上篇 <a href="http://localhost:4000/2019/05/02/5.%20%E4%BD%BF%E7%94%A8%20Springboot%20%E7%BC%96%E5%86%99%20Helloworld%20%E5%BA%94%E7%94%A8/" target="_blank" rel="noopener"> 使用 Springboot 编写 Helloworld 应用</a> 我们完成了使用 Springboot 编写 Helloworld 应用的过程，接下来我们要基于这个简单的应用制作 Dockerfile 文件，以构建 Helloworld 应用的镜像，实现容器化部署。</p>
 <p>先将 hellospringboot 工程拷贝到 CentOS7 机器上来，然后用 gradlew 打包应用:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># chmod + gradlew</span><br><span class="line"></span><br><span class="line"># ./gradlew build</span><br></pre></td></tr></table></figure></p>
 <p>这时，在 ./build/libs/ 目录下就可以看到打包好了的 jar 包了，这时候运行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># java -jar ./build/libs/hellospringboot-0.0.1-SNAPSHOT.jar</span><br></pre></td></tr></table></figure></p>
-<p>应用就可以跑起来了，访问 ip:8080 就可以看到有 Helloworld 返回了。但是这还不是我们想要的，我们要实现容器化部署。于是我编写了 Dockerfile：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">FROM java:8-jre</span><br><span class="line"></span><br><span class="line">MAINTAINER &lt;chenliangtang&gt;</span><br><span class="line"></span><br><span class="line">COPY ./build/libs/* docker-entrypoint.sh /</span><br><span class="line"></span><br><span class="line">RUN chmod +x docker-entrypoint.sh &amp;&amp; ln -s /docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh</span><br><span class="line"></span><br><span class="line">WORKDIR /</span><br><span class="line"></span><br><span class="line">EXPOSE 8080</span><br><span class="line"></span><br><span class="line">CMD [&quot;docker-entrypoint.sh&quot;]</span><br></pre></td></tr></table></figure></p>
+<p>应用就可以跑起来了，访问 ip:8080 就可以看到有 Helloworld 返回了。但是这还不是我们想要的，我们要实现容器化部署。于是我编写了 Dockerfile：<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> java:<span class="number">8</span>-jre</span><br><span class="line"></span><br><span class="line"><span class="keyword">MAINTAINER</span> &lt;chenliangtang&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">COPY</span> ./build/libs/* docker-entrypoint.sh /</span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span> chmod +x docker-entrypoint.sh &amp;&amp; ln -s /docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh</span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span> /</span><br><span class="line"></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">8080</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span> ["docker-entrypoint.sh"]</span><br></pre></td></tr></table></figure></p>
 <p>其中， docker-entrypoint.sh shell 脚本内容如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">jarFile=$(ls . | grep jar) </span><br><span class="line"></span><br><span class="line">java -jar $jarFile</span><br></pre></td></tr></table></figure></p>
 <p>对 Dockerfile 内容的解释：其中 Dockerfile 这个名称不能变，就如 Makefile 文件是 make 编译的文件说明一样，这是规范；FROM 这行表示我构建的镜像基础是 jdk8，因为 hellospringboot 应用依赖于 jdk8；MAINTAINER 写上作者；COPY 行是把需要生成镜像的 jar 包和 shell 脚本拷贝进镜像中；RUN 行把 shell 脚本改成可执行文件，同时将脚本链接到环境变量中，以方便后面的 CMD 执行；WORKDIR 指明镜像的工作目录；EXPOSE 指明镜像的开放端口，因为 hellospringboot 端口为 8080 所以这里也设置为 8080；最后一行的 CMD 是指在启动容器时会执行的命令，这里就是通过执行 java -jar 命令将服务启动起来。</p>
 <p>docker-entrypoint.sh 脚本就很简单了，就是获取到 jar 包，然后通过 java -jar 命令把应用启动起来。</p>
@@ -467,6 +467,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/03/7. HTML 知识总结/" rel="prev" title="HTML 知识总结">
+                HTML 知识总结 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -549,7 +553,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -560,7 +564,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -571,7 +575,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
